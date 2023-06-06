@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Board</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>My Task board</h1>
+            </div>
+        </header>
+
+        <section class="section-board">
+            <!-- Form -->
+            <div class="container-form">
+                <form action="#" method="get" onsubmit="submitTask()" id="taskForm" target="_self">
+                    <div>
+                        <label for="task-content"></label>
+                        <input type="text" name="task-content" id="task-content" placeholder="Enter your task">
+                    </div>
+
+                    <div>
+                        <label for="task-date">Date:</label>
+                        <input type="date" name="task-date" id="task-date">
+                    </div>
+
+                    <div>
+                        <label for="task-time">Time:</label>
+                        <input type="time" name="task-time" id="task-time">
+                    </div>
+
+                    <div>
+                        <button type="submit">Add Note</button>
+                    </div>
+                    <div>
+                        <button type="reset">Reset Form</button>
+                    </div>
+                    <div id="container-status" class="container-status">
+
+                    </div>
+                </form>
+            </div>
+
+            <!-- Notes -->
+            <div id="container-notes" class="container-notes">
+                <ul id="note" class="box-note">
+                <!-- notes will be added here as ui elements with class  "note-style"-->
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/56ce1a5ba7.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

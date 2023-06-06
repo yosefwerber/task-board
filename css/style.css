@@ -1,0 +1,215 @@
+body,
+html {
+    font-family: 'Bahnschrift Light', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    overflow-x: hidden;
+    color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(img/bg.jpg);
+    background-repeat: fit;
+    background-size: auto;
+}
+
+
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 2fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+header {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    z-index: 2;
+    transition: transform 0.5s;
+}
+
+header:hover {
+    transform: skewY(-1deg)
+}
+
+h1 {
+    font-family: 'Gochi Hand', cursive;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 500px;
+    border-radius: 4px;
+    box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.4);
+    background-image: url(img/formbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left, bottom right;
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    border-bottom: 3px solid blue;
+}
+
+form div:nth-child(5),
+form div:nth-child(6) {
+    border-bottom: none;
+}
+
+
+form div input,
+form div button {
+    width: 100%;
+    padding: 1px;
+    border: none;
+    font-family: 'Bahnschrift Light', sans-serif;
+    font-size: 95%;
+    background-color: transparent;
+}
+
+form div input[type="text"] {
+    padding: 4px 0;
+}
+
+form div input[type="date"],
+form div input[type="time"] {
+    cursor: text;
+}
+
+form div input:focus,
+form div button:focus {
+    outline: none;
+}
+
+form div label {
+    padding: 3px 0;
+    align-self: center;
+    font-weight: 400;
+    color: #777;
+}
+
+form div button {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.4s;
+}
+
+form div button:hover {
+    color: black;
+}
+
+.container-status {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+    background-color: red;
+    color: white;
+}
+
+/* ------------------------------ */
+/* Notes */
+/* ------------------------------ */
+.container-notes {
+    width: 100vw;
+}
+
+.box-note {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+
+.note-style {
+    width: 400px;
+    height: 420px;
+    position: relative;
+    padding: 10px;
+    transition: transform 0.2s;
+    list-style-type: none;
+    opacity: 1;
+    animation-name: fadeInNote;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    /* The image used */
+    background-image: url("img/note.gif");
+    /* Center and scale the image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.note-style:hover {
+    transform: skewY(-1deg);
+}
+
+.task-note {
+    height: 250px;
+    max-height: 170px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 90px;
+    word-wrap: break-word;
+    padding-bottom: 5px;
+    transform: skewY(1deg);
+    overflow-y: auto;
+}
+
+.task-date-time {
+    margin-left: 100px;
+    margin-top: 10px;
+    transform: skewY(1deg);
+}
+
+/* delete icon: */
+.container-delete-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.container-delete-icon button {
+    display: inline-block;
+    position: absolute;
+    right: 110px;
+    top: 75px;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+}
+
+.fa-trash {
+    font-size: 150%;
+    background-color: #FEFF99;
+}
+
+.note-style:hover .container-delete-icon {
+    visibility: visible;
+    opacity: 1;
+}
