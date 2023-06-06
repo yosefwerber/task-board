@@ -1,8 +1,8 @@
 # task-board
+https://yosefwerber.github.io/task-board/
+
 Add and remove tasks to manage your day to day tasks.
 Website built using js and css.
 The website was build as a project for John Bryce Full Stack course.
-
-https://yosefwerber.github.io/task-board/
 
 Author: Yosef Werber
